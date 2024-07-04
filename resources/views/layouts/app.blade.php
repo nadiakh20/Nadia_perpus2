@@ -66,6 +66,23 @@
 
     @include('inc.js')
 
+    {{-- <script>
+        $('.btn-add').click(function() {
+            let tbody = $('tbody');
+            let newTr = "<tr>";
+                newTr += "<td>";
+                newTr += "<select class='form-control' name='id_buku[]'>";
+                newTr += "<option>Pilih Buku</option>";
+                newTr += "</select>";
+                newTr += "</td>"
+                newTr += "<td><Input type='date' name='tanggal_pinjam[]' class='form-control'></td>";
+                newTr += "<td><Input type='date' name='tanggal_pengembalian[]' class='form-control'></td>";
+                newTr += "<td>Hapus</td>";
+                newTr += "</tr>";
+                tbody.append(newTr);
+        });
+    </script> --}}
+
 </body>
 
 </html>

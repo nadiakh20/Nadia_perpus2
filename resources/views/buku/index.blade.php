@@ -28,7 +28,7 @@
                                 <td>{{ $data->nama_buku }}</td>
                                 <td>{{ $data->penerbit }}</td>
                                 <td>{{ $data->qty }}</td>
-                                <td>{{ $data->keterangan }}</td>
+                                <td>{{ $data->deskripsi }}</td>
                                 <td>{{ $data->penulis }}</td>
                                 <td>{{ $data->genre }}</td>
                                 <td>

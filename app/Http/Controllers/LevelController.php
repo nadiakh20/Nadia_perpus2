@@ -22,7 +22,8 @@ class LevelController extends Controller
      */
     public function create()
     {
-        //
+        $title = "Tambah Level";
+        return view('level.create', compact('title'));
     }
 
     /**
@@ -30,7 +31,12 @@ class LevelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Level::create([
+            'nama_level' => $request->nama_level,
+            'keterangan' => $request->keterangan,
+        ]);
+
+        return redirect()->to('level')->with('message', 'Data Berhasil ditambah');
     }
 
     /**
@@ -46,7 +52,9 @@ class LevelController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $edit = Level::find($id);
+        $title = "Edit Data " . $edit->name;
+        return view('level.edit', compact('edit', 'title'));
     }
 
     /**
@@ -54,7 +62,11 @@ class LevelController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Level::where('id', $id)->update([
+            'nama_level' => $request->nama_level,
+            'keterangan' => $request->keterangan,
+        ]);
+        return redirect()->to('level')->with('message', 'Data Berhasil diubah');
     }
 
     /**
@@ -62,6 +74,7 @@ class LevelController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Level::where('id', $id)->delete();
+        return redirect()->to('level')->with('message', 'Data berhasil dihapus');
     }
 }

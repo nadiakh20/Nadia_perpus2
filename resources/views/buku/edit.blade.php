@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label for="">Deskripsi</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control">{{ $edit->deskripsi }}</textarea>
+                        <textarea name="deskripsi" id="" cols="30" rows="10" class="form-control">{{ $edit->deskripsi }}</textarea>
                     </div>
                     <div class="form-group mb-3">
                         <label for="">Penulis</label>

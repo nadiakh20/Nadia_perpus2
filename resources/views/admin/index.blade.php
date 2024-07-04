@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pendaftaran PPKDJP</title>
+    <title>Perpustakaan Kita</title>
 
     <!-- Custom fonts for this template-->
     @include('inc.css')

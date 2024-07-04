@@ -33,6 +33,8 @@ class AnggotaController extends Controller
     {
         Anggota::create([
             'nama_anggota' => $request->nama_anggota,
+            'email' => $request->email,
+            'no_tlp' => $request->no_tlp,
         ]);
 
         return redirect()->to('anggota')->with('message', 'Data Berhasil ditambah');
@@ -64,7 +66,7 @@ class AnggotaController extends Controller
         Anggota::where('id', $id)->update([
             'nama_anggota' => $request->nama_anggota,
             'email' => $request->email,
-            'nama_anggota' => $request->nama_anggota,
+            'no_tlp' => $request->no_tlp,
         ]);
         return redirect()->to('anggota')->with('message', 'Data Berhasil diubah');
     }
